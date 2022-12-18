@@ -1,0 +1,25 @@
+<% Comments.forEach((comment)=> { %>
+            <div class="col-12 m-auto card p-2 mt-3 comment" style="width: 85%">
+              <div class="col-12 p-2 d-flex justify-content-between" dir="rtl">
+                <span class="badge bg-dark text-white"><%= comment.id %></span>
+                <span class="badge bg-secondary"><%= comment.created_at %></span>
+              </div>
+              <div class="col-12" dir="auto">
+                <span class="badge bg-success float-end">@ <%= comment.sender_name %></span>
+              </div>
+              <div class="col-12 pt-3 flex-row d-sm-flex" dir="auto">
+                <span style="font-family: 'LMU Vazir'">ایمیل:</span>
+                <p class="pe-2 text-success"><%= comment.email %></p>
+              </div>
+              <div class="col-12 flex-row d-sm-flex" dir="auto">
+                <span style="font-family: 'LMU Vazir'">موضوع:</span>
+                <p class="pe-2 text-secondary"><%= comment.subject %></p>
+              </div>
+              <div class="col-12" dir="auto">
+                <span style="font-family: 'LMU Vazir'">کامنت:</span>
+                <p class="p-2 m-0 me-sm-5" dir="auto">
+                  <%= comment.message %>
+                </p>
+              </div>
+            </div>
+          <% }) %>
